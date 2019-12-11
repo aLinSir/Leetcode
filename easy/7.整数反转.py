@@ -6,7 +6,7 @@ def reverse(x: int) -> int:
     if x == 0: return 0
 
     xstr = str(abs(x)).strip('0')[::-1]
-    
+
     if neg(x):
         if neg(-int(xstr)):
             return '-' + xstr
