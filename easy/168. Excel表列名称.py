@@ -4,7 +4,7 @@
 def convertToTitle(n: int) -> str:
     re = ''
 
-    while n:
+    while n / 26:
         n -= 1
         re = chr(n % 26 + 65) + re
         n = n // 26
