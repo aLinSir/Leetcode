@@ -4,12 +4,10 @@ from typing import List
 
 
 def findErrorNums(nums: List[int]) -> List[int]:
-    l = [n for n in nums if nums.count(n) == 2]
-    for i in range(1, len(nums) + 1):
-        if i not in nums:
-            l[1] = i
-
-    return l
+    n = len(nums)
+    a = sum(nums) - sum(set(nums))
+    b = n * (n + 1) // 2 - sum(set(nums))
+    return [a, b]
 
 
 nums = [1, 2, 2, 4]
